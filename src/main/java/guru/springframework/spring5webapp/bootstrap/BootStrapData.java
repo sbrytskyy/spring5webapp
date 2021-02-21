@@ -38,17 +38,6 @@ public class BootStrapData implements CommandLineRunner {
 
         System.out.println("Publisher Count: " + publisherRepository.count());
 
-        System.out.println("Started in Bootstrap");
-
-        Publisher publisher = new Publisher();
-        publisher.setName("SFG Publishing");
-        publisher.setCity("St Petersburg");
-        publisher.setState("FL");
-
-        publisherRepository.save(publisher);
-
-        System.out.println("Publisher Count: " + publisherRepository.count());
-
         Author eric = new Author("Eric", "Evans");
         Book ddd = new Book("Domain Driven Design", "123123");
         eric.getBooks().add(ddd);
